@@ -1,0 +1,50 @@
+{
+  "name": "shuttle",
+  "version": "1.0.0",
+  "main": "dist/worker.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "miniflare --watch --debug",
+    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "test": "jest --config jestconfig.json --verbose"
+  },
+  "resolutions": {
+    "@iiif/parser": "^1.0.4"
+  },
+  "dependencies": {
+    "@iiif/parser": "^1.0.4",
+    "iiif-builder": "^1.0.2",
+    "probe-image-size": "^7.2.3",
+    "query-string": "^5.1.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.3.1",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^17.0.18",
+    "@types/query-string": "^6.3.0",
+    "@types/service-worker-mock": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "esbuild": "^0.14.14",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.0.1",
+    "miniflare": "^2.2.0",
+    "prettier": "^2.5.1",
+    "rollup": "^2.66.1",
+    "rollup-library-template": "^1.0.4",
+    "rollup-plugin-define": "^1.0.1",
+    "service-worker-mock": "^2.0.5",
+    "ts-jest": "^27.0.1",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.5.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5",
+    "wrangler": "^0.0.17"
+  }
+}
